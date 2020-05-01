@@ -5,8 +5,10 @@ import BrandsDashHeader from './0CommonComponents/BrandsDashHeader'
 import DetailsComponent from './2MoreDetails/DetailsComponent';
 import { Route } from "react-router-dom";
 import Confirmation from './3Confirmation/Confirmation';
-import MyAppointments from './MyAppointments';
+import MyProjects from './MyProjects';
 import PaymentGateway from './4PaymentGateway/PaymentGateway';
+import UploadBannerFile from './UploadAdvtFiles/UploadBannerFile';
+import UploadVideoFile from './UploadAdvtFiles/UploadVideoFile';
 
 const BrandsDash = (props) => {
 
@@ -24,11 +26,13 @@ const BrandsDash = (props) => {
             Hello {userInDash.name}
             <br /><br /><br /><br />
             <Route exact path="/brandsDashboard" component={BrandsDashUI} />
-            <Route exact path="/brandsDashboard/myAppointments" component={MyAppointments} />
+            <Route exact path="/brandsDashboard/myProjects" component={MyProjects} />
 
             <Route exact path="/brandsDashboard/moreDetails" component={DetailsComponent} />
             <Route exact path="/brandsDashboard/confirmationPage" component={Confirmation} />
             <Route exact path="/brandsDashboard/paymentsGateway" component={PaymentGateway} />
+            <Route exact path="/brandsDashboard/uploadBannerFile" component={UploadBannerFile} />
+            <Route exact path="/brandsDashboard/uploadVideoFile" component={UploadVideoFile} />
 
         </div>
     )

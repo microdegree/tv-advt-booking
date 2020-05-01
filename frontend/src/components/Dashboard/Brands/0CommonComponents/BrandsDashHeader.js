@@ -13,7 +13,9 @@ const BrandsDashHeader = (props) => {
                 <Link exact to="/brandsDashboard">  <Navbar.Brand href="#home">Freelanco</Navbar.Brand></Link>
                 <Nav className="mr-auto">
                     <Link exact to="/brandsDashboard"><Nav.Link href="#home">Home</Nav.Link></Link>
-                    <Link to="/brandsDashboard/myAppointments"> <Nav.Link href="#features">My Projects</Nav.Link></Link>
+                    <Link to="/brandsDashboard/myProjects"> <Nav.Link href="#features">My Projects</Nav.Link></Link>
+                    <Link to="/brandsDashboard/uploadBannerFile"> <Nav.Link href="#features">Upload Banner Ad</Nav.Link></Link>
+                    <Link to="/brandsDashboard/uploadVideoFile"> <Nav.Link href="#features">Upload Video Ad</Nav.Link></Link>
 
                     <Button
                         onClick={() => {

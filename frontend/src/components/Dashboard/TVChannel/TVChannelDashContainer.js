@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import auth from '../../Home/CommonComponents/Auth'
 import CorpDashHeader from './CommonComponents/TVChannelDashHeader';
-import CorpDashUI from './TVChannelDashHome/CorpDashUI';
+import TvChannelDashUI from './TVChannelDashHome/TvChannelDashUI';
 import AddProject from './AddProject/AddProject';
 import { Route } from "react-router-dom";
 import UploadChannelLogo from './AddProject/UploadChannelLogo';
@@ -22,7 +22,7 @@ const CorpDashContainer = (props) => {
         <div>
             <CorpDashHeader logout={props.history} />
 
-            <Route exact path="/tvChannelDashboard" component={CorpDashUI} />
+            <Route exact path="/tvChannelDashboard" component={TvChannelDashUI} />
             <Route exact path="/tvChannelDashboard/addProject" component={AddProject} />
             <Route exact path="/tvChannelDashboard/uploadProjectImage" component={UploadChannelLogo} />
 

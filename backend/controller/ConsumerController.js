@@ -14,6 +14,34 @@ router.post("/addNewBooking", (request, response) => {
     });
 });
 
+//Upload Project Logo by Admin
+var multer = require('multer')
+let uploadedBannerName
+var storage = multer.diskStorage(
+    {
+        destination: './backend/uploads/banner/',
+        filename: function (req, file, cb) {
+            uploadedFileName = Date.now() + '-' + file.originalname
+            cb(null, uploadedFileName);
+        }
+    }
+);
+var upload = multer({ storage: storage });
+
+
+router.post('/uploadBanner', upload.single('bannerAdvtFile'), function (request, response) {
+    console.log('upload Video controller')
+
+    try {
+        console.log('uploadedBannerName ', uploadedBannerName)
+        response.send({ 'uploadedBannerName': uploadedBannerName });
+    } catch (err) {
+        response.send(400);
+    }
+
+})
+
+
 // ******** Fetch User Info using email ******** 
 router.get("/getAllProjects", (request, response) => {
 
@@ -28,6 +56,7 @@ router.get("/getAllProjects", (request, response) => {
         response.send(result);
     });
 });
+
 
 
 // ******** Fetch User Info using email ******** 

@@ -67,7 +67,7 @@ router.post("/getMyBookings", (request, response) => {
     });
 });
 
-//File Upload Library
+//Upload Project Logo by Admin
 var multer = require('multer')
 let uploadedFileName
 var storage = multer.diskStorage(

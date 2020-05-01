@@ -24,7 +24,7 @@ const UploadChannelLogo = (props) => {
             .then(data => {
                 console.log(data)
                 console.log('upload success')
-                // props.history.push('./myAppointments')
+                // props.history.push('./myProjects')
 
                 props.history.push({
                     pathname: './addProject',
@@ -46,7 +46,7 @@ const UploadChannelLogo = (props) => {
                         <Card.Title>Upload Channel Logo</Card.Title>
                         <form encType="multipart/form-data" onSubmit={uploadImageInServer}>
                             <label for="avatar">Select image:&nbsp;&nbsp;  </label>
-                            <input type="file" id="avatar" name="avatar" accept="image/*" onChange={handleChange} />
+                            <input type="file" id="avatar" name="avatar" accept="image/*,video/*" onChange={handleChange} />
 
                         &nbsp;&nbsp; <Button variant="primary" type="submit">SUBMIT</Button>
                         </form>
